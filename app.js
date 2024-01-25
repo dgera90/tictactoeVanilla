@@ -44,69 +44,74 @@ function clicked () {
         isCircle=true;
         this.removeEventListener('click', clicked);
         tilesCount.push(this);
-        checkWinner();
+            checkWinner()
+        
         noMoreTiles();
     }
 }
 
 function checkWinner () {
-    if (document.getElementById('1').innerText!=''
-        && document.getElementById('1').innerText==document.getElementById('2').innerText 
-        && document.getElementById('1').innerText == document.getElementById('3').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('4').innerText!=''
-        && document.getElementById('4').innerText==document.getElementById('5').innerText 
-        && document.getElementById('4').innerText == document.getElementById('6').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('7').innerText!='' 
-        && document.getElementById('7').innerText==document.getElementById('8').innerText 
-        && document.getElementById('7').innerText == document.getElementById('9').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('1').innerText!=''
-        && document.getElementById('1').innerText==document.getElementById('5').innerText 
-        && document.getElementById('1').innerText == document.getElementById('9').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('3').innerText!='' 
-        && document.getElementById('3').innerText==document.getElementById('5').innerText 
-        && document.getElementById('3').innerText == document.getElementById('7').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('2').innerText!='' 
-        && document.getElementById('2').innerText==document.getElementById('5').innerText 
-        && document.getElementById('2').innerText == document.getElementById('8').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('1').innerText!='' 
-        && document.getElementById('1').innerText==document.getElementById('4').innerText 
-        && document.getElementById('1').innerText == document.getElementById('7').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } else if (document.getElementById('3').innerText!='' 
-        && document.getElementById('3').innerText==document.getElementById('6').innerText 
-        && document.getElementById('3').innerText == document.getElementById('9').innerText){
-        isWinner=true;
-        alert(result);
-        location.reload();
-    } 
+    setTimeout(() => {
+        if (document.getElementById('1').innerText!=''
+            && document.getElementById('1').innerText==document.getElementById('2').innerText 
+            && document.getElementById('1').innerText == document.getElementById('3').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('4').innerText!=''
+            && document.getElementById('4').innerText==document.getElementById('5').innerText 
+            && document.getElementById('4').innerText == document.getElementById('6').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('7').innerText!='' 
+            && document.getElementById('7').innerText==document.getElementById('8').innerText 
+            && document.getElementById('7').innerText == document.getElementById('9').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('1').innerText!=''
+            && document.getElementById('1').innerText==document.getElementById('5').innerText 
+            && document.getElementById('1').innerText == document.getElementById('9').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('3').innerText!='' 
+            && document.getElementById('3').innerText==document.getElementById('5').innerText 
+            && document.getElementById('3').innerText == document.getElementById('7').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('2').innerText!='' 
+            && document.getElementById('2').innerText==document.getElementById('5').innerText 
+            && document.getElementById('2').innerText == document.getElementById('8').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('1').innerText!='' 
+            && document.getElementById('1').innerText==document.getElementById('4').innerText 
+            && document.getElementById('1').innerText == document.getElementById('7').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } else if (document.getElementById('3').innerText!='' 
+            && document.getElementById('3').innerText==document.getElementById('6').innerText 
+            && document.getElementById('3').innerText == document.getElementById('9').innerText){
+            isWinner=true;
+            alert(result);
+            location.reload();
+        } 
+    },100)
 }
 
 function noMoreTiles() {
-    if(!isWinner){
-        if(tilesCount.length==9){
-            over = true;
-            alert("Sajnálom, vége!");
-            location.reload();
+    setTimeout(() => {
+        if(!isWinner){
+            if(tilesCount.length==9){
+                over = true;
+                alert("Sajnálom, vége!");
+                location.reload();
+            }
         }
-    }
+    },100)
 }
